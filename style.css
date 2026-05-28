@@ -1,0 +1,450 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI',sans-serif;
+}
+
+body{
+
+  min-height:100vh;
+
+  background:
+  radial-gradient(circle at top,#11361f 0%,transparent 30%),
+  #020805;
+
+  color:white;
+
+  overflow:hidden;
+}
+
+.app-container{
+
+  display:flex;
+
+  height:100vh;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+
+  width:220px;
+
+  background:rgba(8,15,10,0.95);
+
+  border-right:1px solid rgba(124,255,155,0.08);
+
+  padding:22px 16px;
+}
+
+.sidebar h2{
+
+  color:#7CFF9B;
+
+  margin-bottom:18px;
+
+  font-size:2rem;
+}
+
+.history-list{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:12px;
+
+  overflow-y:auto;
+
+  max-height:85vh;
+}
+
+.history-item{
+
+  background:rgba(255,255,255,0.04);
+
+  padding:14px;
+
+  border-radius:14px;
+
+  cursor:pointer;
+
+  transition:0.3s ease;
+
+  border:1px solid rgba(124,255,155,0.05);
+
+  color:#d7e5dc;
+
+  font-size:0.92rem;
+
+  line-height:1.5;
+}
+
+.history-item:hover{
+
+  background:rgba(124,255,155,0.08);
+
+  transform:translateY(-2px);
+}
+
+/* MAIN */
+
+.main-container{
+
+  flex:1;
+
+  display:flex;
+
+  flex-direction:column;
+
+  align-items:center;
+
+  padding:10px 24px 14px;
+}
+
+.title{
+
+  font-size:4.4rem;
+
+  color:#7CFF9B;
+
+  margin-top:8px;
+
+  margin-bottom:6px;
+}
+
+.subtitle{
+
+  color:#b6cdbd;
+
+  margin-bottom:16px;
+
+  font-size:1.05rem;
+}
+
+.chat-container{
+
+  width:100%;
+
+  max-width:1120px;
+
+  height:760px;
+
+  background:rgba(10,18,12,0.72);
+
+  border:1px solid rgba(124,255,155,0.08);
+
+  border-radius:34px;
+
+  padding:20px;
+
+  backdrop-filter:blur(12px);
+
+  box-shadow:
+  0 0 30px rgba(124,255,155,0.04);
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:space-between;
+}
+
+.chat-box{
+
+  flex:1;
+
+  overflow-y:auto;
+
+  padding-right:8px;
+}
+
+.chat-box::-webkit-scrollbar{
+
+  width:4px;
+}
+
+.chat-box::-webkit-scrollbar-thumb{
+
+  background:#2f5a40;
+
+  border-radius:20px;
+}
+
+/* MESSAGE ROWS */
+
+.message-row{
+
+  display:flex;
+
+  width:100%;
+
+  margin-bottom:18px;
+}
+
+.bot-row{
+
+  justify-content:flex-start;
+}
+
+.user-row{
+
+  justify-content:flex-end;
+}
+
+.bot-wrapper{
+
+  display:flex;
+
+  align-items:flex-start;
+
+  gap:12px;
+
+  max-width:78%;
+}
+
+/* AVATAR */
+
+.avatar{
+
+  width:42px;
+
+  height:42px;
+
+  border-radius:50%;
+
+  background:rgba(124,255,155,0.08);
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  border:1px solid rgba(124,255,155,0.1);
+
+  flex-shrink:0;
+}
+
+/* MESSAGES */
+
+.message{
+
+  padding:16px 20px;
+
+  border-radius:20px;
+
+  line-height:1.8;
+
+  font-size:0.97rem;
+
+  animation:fadeIn 0.3s ease;
+
+  box-shadow:
+  0 0 15px rgba(0,0,0,0.2);
+
+  word-wrap:break-word;
+}
+
+.bot{
+
+  background:rgba(255,255,255,0.05);
+
+  color:#f3f7f4;
+
+  border-top-left-radius:6px;
+}
+
+.user{
+
+  background:#58b874;
+
+  color:white;
+
+  border-top-right-radius:6px;
+
+  max-width:68%;
+}
+
+/* BOTTOM PANEL */
+
+.bottom-panel{
+
+  margin-top:10px;
+
+  padding-top:14px;
+
+  border-top:1px solid rgba(124,255,155,0.06);
+}
+
+.status{
+
+  color:#7CFF9B;
+
+  margin-bottom:16px;
+
+  text-align:center;
+
+  font-size:1rem;
+}
+
+/* MIC */
+
+.mic-area{
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  gap:18px;
+}
+
+.wave-line{
+
+  width:160px;
+
+  height:2px;
+
+  opacity:0.55;
+
+  background:
+  repeating-linear-gradient(
+    to right,
+    #7CFF9B,
+    #7CFF9B 4px,
+    transparent 4px,
+    transparent 8px
+  );
+}
+
+.mic-button{
+
+  width:82px;
+
+  height:82px;
+
+  border:none;
+
+  border-radius:50%;
+
+  background:#183321;
+
+  color:#7CFF9B;
+
+  font-size:2rem;
+
+  cursor:pointer;
+
+  transition:0.3s ease;
+
+  border:2px solid rgba(124,255,155,0.2);
+
+  box-shadow:
+  0 0 25px rgba(124,255,155,0.08);
+}
+
+.mic-button:hover{
+
+  transform:scale(1.05);
+}
+
+.mic-button.listening{
+
+  animation:pulse 1.2s infinite;
+
+  background:#7CFF9B;
+
+  color:#08120d;
+}
+
+/* BUTTONS */
+
+.controls{
+
+  display:flex;
+
+  justify-content:center;
+
+  gap:14px;
+
+  margin-top:18px;
+}
+
+.control-btn{
+
+  padding:12px 22px;
+
+  border:none;
+
+  border-radius:14px;
+
+  background:rgba(124,255,155,0.08);
+
+  color:#7CFF9B;
+
+  cursor:pointer;
+
+  border:1px solid rgba(124,255,155,0.18);
+
+  transition:0.3s ease;
+
+  font-size:0.95rem;
+
+  font-weight:600;
+
+  backdrop-filter:blur(10px);
+
+  min-width:170px;
+}
+
+.control-btn:hover{
+
+  background:#7CFF9B;
+
+  color:#08120d;
+
+  transform:translateY(-2px);
+}
+
+#stopBtn{
+
+  display:none;
+}
+
+.clear-btn{
+
+  background:rgba(255,255,255,0.04);
+}
+
+/* ANIMATIONS */
+
+@keyframes pulse{
+
+  0%{
+    transform:scale(1);
+  }
+
+  50%{
+    transform:scale(1.08);
+  }
+
+  100%{
+    transform:scale(1);
+  }
+}
+
+@keyframes fadeIn{
+
+  from{
+    opacity:0;
+    transform:translateY(10px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}

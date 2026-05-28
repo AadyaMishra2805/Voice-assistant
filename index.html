@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Voice Assistant</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="app-container">
+
+  <!-- SIDEBAR -->
+
+  <div class="sidebar">
+
+    <h2>History</h2>
+
+    <div class="history-list" id="historyList"></div>
+
+  </div>
+
+  <!-- MAIN -->
+
+  <div class="main-container">
+
+    <h1 class="title">Voice Assistant</h1>
+
+    <p class="subtitle">
+      Speak. Ask. Get Answers.
+    </p>
+
+    <div class="chat-container">
+
+      <div class="chat-box" id="chatBox">
+
+        <div class="message-row bot-row">
+
+          <div class="bot-wrapper">
+
+            <div class="avatar">🤖</div>
+
+            <div class="message bot">
+              Hello 👋 How can I help you today?
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="bottom-panel">
+
+        <p class="status" id="status">
+          Click microphone to speak
+        </p>
+
+        <div class="mic-area">
+
+          <div class="wave-line"></div>
+
+          <button class="mic-button" id="micBtn">
+            🎤
+          </button>
+
+          <div class="wave-line"></div>
+
+        </div>
+
+        <div class="controls">
+
+          <button class="control-btn" id="stopBtn">
+            ⏹ Stop Speaking
+          </button>
+
+          <button class="control-btn clear-btn" id="clearBtn">
+            🗑 Clear History
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
